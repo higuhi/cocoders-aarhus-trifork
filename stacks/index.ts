@@ -1,7 +1,7 @@
 import { MyStack } from "./MyStack";
 import { App } from "@serverless-stack/resources";
 
-export const index = (app: App): void => {
+export default (app: App): void => {
     app.setDefaultFunctionProps({
         runtime: "nodejs16.x",
         srcPath: "services",
