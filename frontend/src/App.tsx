@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback } from "react";
-import Select, {ActionMeta} from "react-select";
+import Select from "react-select";
 import { Radio } from  "react-loader-spinner";
 import { registerLocale, getNames, getAlpha2Code } from "i18n-iso-countries";
 import CountryLocaleData from "i18n-iso-countries/langs/en.json";
@@ -24,7 +24,7 @@ export default () => {
         });
     }, []);
 
-    const onChange = useCallback(async (option: CountryOption | null, actionMeta: ActionMeta<CountryOption>) => {
+    const onChange = useCallback(async (option: CountryOption | null) => {
         setLoading(true);
         setErrorMsg(undefined);
         setConfirmed(undefined);
