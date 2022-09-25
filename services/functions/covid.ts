@@ -16,10 +16,26 @@ const sendRequest = async (options: RequestOptions, payload: any): Promise<any> 
 };
 
 export const handler = async (event: APIGatewayEvent, context: Context): Promise<APIGatewayProxyResult> => {
+    const isoCode = event.pathParameters?.isoCode;
+
+    if (!isoCode) {
+        return {
+            statusCode: 400,
+            body: JSON.stringify({ error: true, message: "iso code is missing" }),
+        };
+    }
+
+    if (isoCode.length !== 2) {
+        return {
+            statusCode: 400,
+            body: JSON.stringify({ error: true, message: "iso code must be two character string" }),
+        };
+    }
+
     const requestOptions: RequestOptions = {
         host: "covid-api.mmediagroup.fr",
         port: 443,
-        path: "/v1/cases?country=France",
+        path: "/v1/cases?ab=" + isoCode.toUpperCase(),
         headers: {
             "Content-Type": "application/json"
         },

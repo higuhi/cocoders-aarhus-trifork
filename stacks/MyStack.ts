@@ -22,9 +22,7 @@ export const MyStack = ({ stack }: StackContext): void => {
             }
         },
         routes: {
-            // "POST /": "functions/lambda.handler",
-            // "GET /test": "functions/covid.handler"
-            "GET /": "functions/covid.handler"
+            "GET /{isoCode}": "functions/covid.handler"
         }
     });
 

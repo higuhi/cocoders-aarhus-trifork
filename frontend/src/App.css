@@ -1,5 +1,7 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .App-logo {
@@ -35,4 +37,36 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+button {
+  margin: 0.5em;
+}
+
+.loader {
+  position: absolute;
+}
+
+.select_country {
+  margin-top: 100px;
+  width: 30%;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.content_error {
+  margin: 1em;
+  color: red;
+}
+
+.content_confirmed {
+  margin: 1em;
+}
+
+.content_population {
+  margin: 1em;
 }

@@ -31,6 +31,7 @@
     "services"
   ],
   "dependencies": {
-    "aws-sdk": "^2.1220.0"
+    "aws-sdk": "^2.1220.0",
+    "react-loader-spinner": "^5.3.4"
   }
 }

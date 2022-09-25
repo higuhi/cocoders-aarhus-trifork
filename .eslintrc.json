@@ -34,6 +34,7 @@
             "error",
             "always"
         ],
-        "@typescript-eslint/no-explicit-any": "off"
+        "@typescript-eslint/no-explicit-any": "off",
+        "no-prototype-builtins": "off"
     }
 }
